@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "509543250153",
+    "project_id": "multi-store-app-32142",
+    "storage_bucket": "multi-store-app-32142.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509543250153:android:69f9364a28cf28f8a59878",
+        "android_client_info": {
+          "package_name": "com.GEspinal.multi_store_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhd0otmGBn1Gj2pIhoOboDsdbMooFaSLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

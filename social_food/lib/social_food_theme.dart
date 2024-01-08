@@ -39,30 +39,30 @@ class SocialFoodTheme{
     bodyLarge: GoogleFonts.openSans(
         fontSize: 14.0,
         fontWeight: FontWeight.w700,
-        color: Colors.black
+        color: Colors.white
     ),
     displayLarge: GoogleFonts.openSans(
         fontSize: 32.0,
         fontWeight: FontWeight.bold,
-        color: Colors.black
+        color: Colors.white
     ),
 
     displayMedium: GoogleFonts.openSans(
         fontSize: 21.0,
         fontWeight: FontWeight.w700,
-        color: Colors.black
+        color: Colors.white
     ),
 
     displaySmall: GoogleFonts.openSans(
         fontSize: 16.0,
         fontWeight: FontWeight.w600,
-        color: Colors.black
+        color: Colors.white
     ),
 
     titleLarge: GoogleFonts.openSans(
         fontSize: 20.0,
         fontWeight: FontWeight.w600,
-        color: Colors.black
+        color: Colors.white
     ),
   );
 
@@ -97,17 +97,17 @@ class SocialFoodTheme{
     return ThemeData(
       brightness: Brightness.light,
       checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateColor.resolveWith((states) => Colors.black)
+          fillColor: MaterialStateColor.resolveWith((states) => Colors.white)
       ),
 
       appBarTheme: AppBarTheme(
-          foregroundColor: Colors.black,
-          backgroundColor: Colors.white
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.black
       ),
 
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.black,
       ),
 
       bottomNavigationBarTheme: BottomNavigationBarThemeData(

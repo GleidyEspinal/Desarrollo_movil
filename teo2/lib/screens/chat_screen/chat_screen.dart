@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:teo2/entities/message.dart';
+import 'package:teo2/provider/chat_provider.dart';
 import 'package:teo2/screens/widgets/chat/her_message_bubble.dart';
 import 'package:teo2/screens/widgets/chat/my_message_bubble.dart';
 import 'package:teo2/screens/widgets/shared/message_field_box.dart';
@@ -28,6 +31,10 @@ class ChatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    //Crear un objeto de tipo provider
+    final chatProvider = context.watch<ChatProvider>();
+
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -35,12 +42,17 @@ class ChatView extends StatelessWidget {
           children: [
             Expanded(
                 child: ListView.builder(
-                  itemCount: 100,
+                  itemCount: chatProvider.messageList.length,
+                  controller: chatProvider.scrollController,
                   itemBuilder: (context, index) {
-                    return index % 2 == 0 ? HerMessageBubble() : MyMessageBubble();
+                    final messsage = chatProvider.messageList[index];
+                    return messsage.fromWho == FromWho.me? MyMessageBubble(messsage: messsage,): HerMessageBubble(message: messsage,);
                   },)
             ),
-            MessageFieldBox()
+            MessageFieldBox(onvalue: (String value) {
+              chatProvider.sendMessage(value);
+              chatProvider.moveScrollToBottom();
+            },)
           ],
         ),
       ),

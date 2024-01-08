@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_food/card_1.dart';
+import 'package:social_food/card_2.dart';
+import 'package:social_food/card_3.dart';
 
 class Home extends StatefulWidget {
   const Home ({super.key});
@@ -14,17 +16,8 @@ class Home extends StatefulWidget {
 
   List<Widget> pages = [
     Card1(),
-    Container (
-      color: Colors.purple,
-    ),
-
-    Container (
-      color: Colors.red,
-    ),
-
-    Container (
-      color: Colors.pink,
-    ),
+    Card2(),
+    Card3()
 
   ];
 
