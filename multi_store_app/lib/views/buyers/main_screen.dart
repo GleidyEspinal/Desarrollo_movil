@@ -52,7 +52,7 @@ class _MainScrenState extends State<MainScren> {
               label: "Explore",
             ),
             BottomNavigationBarItem(
-              icon: SvgPicture.asset("assets/icons/store.svg", width: 20),
+              icon: SvgPicture.asset("assets/icons/shop.svg", width: 20),
               label: "Store",
             ),
             BottomNavigationBarItem(
