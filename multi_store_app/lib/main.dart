@@ -4,9 +4,8 @@ import 'package:multi_store_app/views/buyers/main_screen.dart';
 import 'dart:io';
 
 void main() async {
-  runApp(MyApp());
   WidgetsFlutterBinding.ensureInitialized();
-  var object = Platform.isAndroid ? await Firebase.initializeApp(
+  Platform.isAndroid ? await Firebase.initializeApp(
     options: FirebaseOptions(
         apiKey: "AIzaSyAhd0otmGBn1Gj2pIhoOboDsdbMooFaSLw",
         appId: "1:509543250153:android:69f9364a28cf28f8a59878",
